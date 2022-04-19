@@ -10,7 +10,7 @@ pipeline {
 	
 	  stage('Docker version Check') {
          steps {
-            bat 'docker -v'
+            powershell 'docker -v'
          }
       }
 
