@@ -41,6 +41,14 @@ pipeline {
             }
          }
       }
+	  
+	  stage('Run Tests') {
+         steps {
+            pwsh(script: """
+               pytest ./tests/test_sample.py
+            """)
+         }
+      }
 
       stage('Stop test app') {
          steps {
