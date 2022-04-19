@@ -55,7 +55,7 @@ pipeline {
             stage('Run Anchore') {
                steps {
                   pwsh(script: """
-                     Write-Output "blackdentech/jenkins-course" > anchore_images
+                     Write-Output "aliamjad94/jenkins-course" > anchore_images
                   """)
                   anchore bailOnFail: false, bailOnPluginFail: false, name: 'anchore_images'
                }
@@ -64,7 +64,7 @@ pipeline {
                steps {
                   sleep(time: 30, unit: 'SECONDS')
                   // pwsh(script: """
-                  // C:\\Windows\\System32\\wsl.exe -- sudo trivy blackdentech/jenkins-course
+                  // C:\\Windows\\System32\\wsl.exe -- sudo trivy aliamjad94/jenkins-course
                   // """)
                }
             }
