@@ -8,9 +8,9 @@ pipeline {
          }
       }
 	
-	stage('Docker version Check') {
+	  stage('Docker version Check') {
          steps {
-            pwsh(script: 'docker -v')
+            powershell 'docker -v'
          }
       }
 
