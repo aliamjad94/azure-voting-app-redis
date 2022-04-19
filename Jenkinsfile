@@ -7,6 +7,13 @@ pipeline {
             echo "$GIT_BRANCH"
          }
       }
+	
+	stage('Docker version Check') {
+         steps {
+            pwsh(script: 'docker -v')
+         }
+      }
+
       stage('Docker Build') {
          steps {
             pwsh(script: 'docker images -a')
